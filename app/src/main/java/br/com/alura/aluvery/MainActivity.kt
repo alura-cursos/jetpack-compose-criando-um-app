@@ -9,6 +9,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -38,14 +39,25 @@ class MainActivity : ComponentActivity() {
         setContent {
             AluveryTheme {
                 Surface {
-                    ProductItem()
+                    ProductsSection()
                 }
             }
         }
     }
 }
 
-@Preview(showBackground = true)
+@Composable
+fun ProductsSection() {
+    Column {
+        Text(text = "Promoções")
+        Row {
+           ProductItem()
+           ProductItem()
+           ProductItem()
+        }
+    }
+}
+
 @Composable
 fun ProductItem() {
     Surface(
@@ -76,7 +88,7 @@ fun ProductItem() {
                     contentDescription = null,
                     Modifier
                         .size(imageSize)
-                        .offset(y = imageSize/2)
+                        .offset(y = imageSize / 2)
                         .clip(shape = CircleShape)
                         .align(BottomCenter)
                 )
@@ -99,4 +111,16 @@ fun ProductItem() {
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ProductsSectionPreview() {
+    ProductsSection()
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ProductItemPreview() {
+    ProductItem()
 }
