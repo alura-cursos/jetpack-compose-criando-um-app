@@ -49,8 +49,22 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ProductsSection() {
     Column {
-        Text(text = "Promoções")
-        Row {
+        Text(
+            text = "Promoções",
+            Modifier.padding(
+                start = 16.dp,
+                top = 16.dp,
+                end = 16.dp
+            ),
+            fontSize = 20.sp,
+            fontWeight = FontWeight(400)
+        )
+        Row(Modifier.padding(
+            start = 16.dp,
+            top = 8.dp,
+            16.dp,
+            bottom = 16.dp
+        ).fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
            ProductItem()
            ProductItem()
            ProductItem()
@@ -61,7 +75,6 @@ fun ProductsSection() {
 @Composable
 fun ProductItem() {
     Surface(
-        Modifier.padding(8.dp),
         shape = RoundedCornerShape(15.dp),
         elevation = 4.dp
     ) {
