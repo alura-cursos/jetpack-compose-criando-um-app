@@ -4,8 +4,7 @@ import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -59,15 +58,21 @@ fun ProductsSection() {
             fontSize = 20.sp,
             fontWeight = FontWeight(400)
         )
-        Row(Modifier.padding(
-            start = 16.dp,
-            top = 8.dp,
-            16.dp,
-            bottom = 16.dp
-        ).fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-           ProductItem()
-           ProductItem()
-           ProductItem()
+        Row(
+            Modifier
+                .padding(
+                    top = 8.dp,
+                    bottom = 16.dp
+                )
+                .fillMaxWidth()
+                .horizontalScroll(rememberScrollState()),
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            Spacer(Modifier)
+            ProductItem()
+            ProductItem()
+            ProductItem()
+            Spacer(Modifier)
         }
     }
 }
@@ -106,7 +111,7 @@ fun ProductItem() {
                         .align(BottomCenter)
                 )
             }
-            Spacer(modifier = Modifier.height(imageSize/2))
+            Spacer(modifier = Modifier.height(imageSize / 2))
             Column(Modifier.padding(16.dp)) {
                 Text(
                     text = LoremIpsum(50).values.first(),
