@@ -34,16 +34,33 @@ import br.com.alura.aluvery.ui.theme.AluveryTheme
 import br.com.alura.aluvery.ui.theme.Purple200
 import br.com.alura.aluvery.ui.theme.Purple500
 import br.com.alura.aluvery.ui.theme.Teal200
+import java.lang.Appendable
 import java.math.BigDecimal
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AluveryTheme {
-                Surface {
-                    ProductsSection()
-                }
+            App()
+        }
+    }
+}
+
+@Composable
+fun App() {
+    AluveryTheme {
+        Surface {
+            Column(
+                Modifier
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                Spacer(Modifier)
+                ProductsSection()
+                ProductsSection()
+                ProductsSection()
+                Spacer(Modifier)
             }
         }
     }
@@ -56,7 +73,6 @@ fun ProductsSection() {
             text = "Promoções",
             Modifier.padding(
                 start = 16.dp,
-                top = 16.dp,
                 end = 16.dp
             ),
             fontSize = 20.sp,
@@ -65,8 +81,7 @@ fun ProductsSection() {
         Row(
             Modifier
                 .padding(
-                    top = 8.dp,
-                    bottom = 16.dp
+                    top = 8.dp
                 )
                 .fillMaxWidth()
                 .horizontalScroll(rememberScrollState()),
@@ -152,6 +167,12 @@ fun ProductItem(product: Product) {
             }
         }
     }
+}
+
+@Preview(showSystemUi = true)
+@Composable
+fun AppPreview() {
+    App()
 }
 
 @Preview(showBackground = true)
