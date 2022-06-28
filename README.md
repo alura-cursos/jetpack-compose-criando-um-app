@@ -1,22 +1,11 @@
-# 7DaysOfCode Android
+# Aluvery
 
-## 📐 Projeto desenvolvido
+## 🔨 Funcionalidades do projeto
 
-App Android desenvolvido com o Jetpack Compose para exibir informações do perfil do GitHub:
+## ✔️ Técnicas e tecnologias utilizadas
 
-## 🔨 Técnicas e tecnologias
+## 📁 Acesso ao projeto
 
-- Android
-- Kotlin
-- Jetpack Compose
-- Retrofit
-- Coroutines
-- Coil
+<!-- ## 📚 Mais informações do curso
 
-## 📂 Acesso ao projeto
-
-Você pode acessar o código fonte a partir da [branch dev](https://github.com/alura-cursos/SevenDaysOfCodeAndroid/tree/dev).
-
-<!-- ## 🎯 Desafio 
-
-Gostou do projeto e quer fazer o desafio? Faça um registro no #7DaysOfCode Kotlin
+**Faça um CTA (_call to action_) para o curso do projeto**
