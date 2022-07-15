@@ -27,6 +27,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.alura.aluvery.ui.components.ChallengeComposable
 import br.com.alura.aluvery.ui.theme.AluveryTheme
 import br.com.alura.aluvery.ui.theme.Purple200
 import br.com.alura.aluvery.ui.theme.Purple500
@@ -69,9 +70,9 @@ fun ProductsSection() {
             horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Spacer(Modifier)
-            ProductItem()
-            ProductItem()
-            ProductItem()
+            ChallengeComposable()
+            ChallengeComposable(LoremIpsum(50).values.first())
+            ChallengeComposable(LoremIpsum(10).values.first())
             Spacer(Modifier)
         }
     }
