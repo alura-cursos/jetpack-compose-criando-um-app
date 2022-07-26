@@ -1,3 +1,5 @@
+![thumb-jetpackcompose](https://user-images.githubusercontent.com/8989346/181015609-51e7caaf-2d0e-447b-a2fd-7dd758c32c56.png)
+
 # Aluvery
 
 App de entrega de comidas e bebidas em geral.
