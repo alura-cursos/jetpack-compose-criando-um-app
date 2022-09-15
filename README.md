@@ -39,6 +39,6 @@ Após baixar o projeto, você pode abrir com o Android Studio. Para isso, na tel
 
 O Android Studio deve executar algumas tasks do Gradle para configurar o projeto, aguarde até finalizar. Ao finalizar as tasks, você pode executar o App 🏆
 
-<!-- ## 📚 Mais informações do curso
+## 📚 Mais informações do curso
 
-**Faça um CTA (_call to action_) para o curso do projeto**
+Gostou do projeto e quer aprender como implementá-lo? Você pode [acessar o curso de Jetpack Compose](https://www.alura.com.br/curso-online-jetpack-compose-app-android).
